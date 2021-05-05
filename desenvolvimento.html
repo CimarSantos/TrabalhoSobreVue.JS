@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento</title>
+    <link rel="stylesheet" href="/css/style_desenvolvimento.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script href="/JS/vue.js"></script>
+</head>
+<body>
+    <a href="/index.html" class="voltar">&larr;</a>
+
+    <h1 id="topo">Desenvolvimento</h1>
+
+    <p>Basicamente, o <b>Vue.Js</b> funciona como um auxiliar no desenvolvimento do Front-End, focando em trabalhar juntamente ao HTML. Se o código HTML for alterado, ele automaticamente altera no Vue, deixando assim a integração do framework com o HTML mais veloz e precisa!</p>
+    
+    <p>Através do Vue conseguimos alterar imediatamente qualquer aspecto do nosso HTML em tempo real, somente precisamos de algumas pequenas linhas de código para verificar o funcionamento do Vue integrado ao HTML. </p>
+
+    <h2>Exemplos Práticos</h3>
+    <ul>
+    div id="app" <br>
+    <ul>{{ message }}<br></ul>
+    div<br><br>
+    
+      script<br>
+        <ul>var app = new Vue({<br></ul>
+        <ul><ul>el: '#app',<br>
+        data: {<br>
+          <ul>message: 'Hello Vue!'<br>
+          </ul>}</ul>
+        })<br></ul>
+      script<br><br>
+    </ul>
+    
+    <h4>Resultado:</h4>
+    <div class="hello">
+      <div id="app">
+        {{ message }}
+      </div>
+      
+      <script>
+        var app = new Vue({
+          el: '#app',
+          data: {
+            message: 'Hello Vue!'
+          }
+        })
+      </script>
+    <br>
+    <h3><li>Renderização Declarativa</li></h3>
+    <div id="app-2">
+        <span v-bind:title="message">
+          Pare o mouse sobre mim e veja a dica interligada dinamicamente!
+        </span>
+      </div>
+
+      <script>
+      var app2 = new Vue({
+        el: '#app-2',
+        data: {
+          message: 'Você carregou esta página em ' + new Date().toLocaleString()
+        }
+      })
+    </script>
+
+    <h3><li>Condicionais e Laços</li></h3>
+    <div id="app-3">
+    <p v-if="seen">Agora você me viu</p>
+    </div>
+
+    <script>
+        var app3 = new Vue({
+            el: '#app-3',
+            data: {
+            seen: true
+            }
+        })
+    </script>
+
+    <div id="app-4">
+        <ol>
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+        </ol>
+    </div>
+    <script>
+        var app4 = new Vue({
+            el: '#app-4',
+            data: {
+                todos: [
+                    { text: 'Aprender JavaScript' },
+                    { text: 'Aprender Vue' },
+                    { text: 'Criar algo incrível' }
+                ]
+            }
+        })
+    </script>
+
+    <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Inverter Mensagem</button>
+    </div>
+
+    <script>
+        var app5 = new Vue({
+            el: '#app-5',
+            data: {
+                message: 'Olá Vue!'
+            },
+            methods: {
+                reverseMessage: function () {
+                    this.message = this.message.split('').reverse().join('')
+                }
+            }
+        })
+    </script>
+
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div>
+
+    <script>
+        var app6 = new Vue({
+            el: '#app-6',
+            data: {
+                message: 'Olá Vue!'
+            }
+        })
+    </script>
+
+    <h3><li>Composição com Componentes</li></h3>
+    <SCript>
+        Vue.component('todo-item', {
+            props: ['todo'],
+            template: '<li>Isso é um item</li>'
+        })
+
+        var app = new Vue(...js)
+    </SCript>
+
+    <div id="app-7">
+        <ol>
+        <todo-item
+            v-for="item in groceryList"
+            v-bind:todo="item"
+            v-bind:key="item.id"
+        ></todo-item>
+        </ol>
+    </div>
+
+    <script>
+        Vue.component('todo-item', {
+            props: ['todo'],
+            template: '<li>{{ todo.text }}</li>'
+            })
+
+            var app7 = new Vue({
+            el: '#app-7',
+            data: {
+                groceryList: [
+                { id: 0, text: 'Vegetais' },
+                { id: 1, text: 'Queijo' },
+                { id: 2, text: 'Qualquer outra coisa que humanos podem comer' }
+                ]
+            }
+        })
+    </script>
+    <a href="#topo" class="topo">&uarr;</a>
+</body>
+</html>

@@ -1,0 +1,54 @@
+* {
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(0deg, rgba(10,43,78,1) 0%, rgba(9,9,121,1) 25%, rgba(66,185,131,1) 100%);
+}
+
+.vue {
+    text-align: center;
+    
+ }
+
+nav {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    color: rgb(219, 225, 231);
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    border-radius: 20%;
+    border: 3px solid rgb(219, 223, 228);
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 9rem;
+    cursor: pointer;
+    margin: 2rem;
+ }
+
+ button:hover {
+    font-size: 120%;
+    color: #42B983;
+    border: #38516B;
+ }
+
+ footer {
+    margin-top: 6.5rem;
+    text-align: center;
+    color: #42B983;
+ }
+
+ footer a{
+    text-decoration: none;
+    color: #42B983;
+ }
+
+ footer a:hover{
+     color: #38516B;
+ }
+
+ 
+

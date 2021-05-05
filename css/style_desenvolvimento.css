@@ -1,0 +1,43 @@
+body {
+    background: #42B983;
+    color: #0A2B4E;
+    padding: 10px 10px 10px 40px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+.topo {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    font-size: 36px;
+}
+
+.voltar {
+    text-decoration: none;
+    font-size: 36px;
+}
+
+h2{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.techs{
+    text-align: center;
+}
+
+img{
+    width: 14rem;
+    text-align: center;
+}
